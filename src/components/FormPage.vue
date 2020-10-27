@@ -1,6 +1,6 @@
 <template>
   <div>
-    <FormGenerator  :form="form"  :drawer="drawer"/>
+    <FormGenerator :form="form" :handleSubmission="handleSubmission" />
   </div>
 </template>
 
@@ -11,10 +11,13 @@ export default {
   created() {},
   data() {
     return {
-      cool:'good' , 
-      drawer:"hello world",
+      drawer: "hello world",
       form: [
-        {
+        // form-title
+        "Police Brutality Report Form",
+        // form title end
+        [
+           {
           label: "What is the name of the officer in question?",
           type: "text",
         },
@@ -26,11 +29,15 @@ export default {
           label: "How much is the bribe that was paid? (optional)",
           type: "number",
         },
+        ]
+       
       ],
     };
   },
   props: {},
-  methods: {},
+  methods: {
+    handleSubmission() {},
+  },
 
   components: {
     FormGenerator,
