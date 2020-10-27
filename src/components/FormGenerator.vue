@@ -1,15 +1,13 @@
 <template>
   <div>
-    <h1>Form Component goes here</h1>
-    <h1 class="form-title">{{ form[0] }}</h1>
-    
-
-
-    <div v-for="forms in form[1]" :key="forms.label" class="=">
-      <form>
-       
-        <label> {{ forms.label }}</label>
-        <input :type="forms.type" />
+    <h1 class="form-title">{{ form[0].title }}</h1>
+    <div>
+      <form @submit="handleSubmission()">
+        <div v-for="forms in form[1]" :key="forms.label">
+          <label> {{ forms.label }}</label>
+          <input :type="forms.type" required />
+        </div>
+        <button class="btn" type="submit">{{ form[2].buttontitle }}</button>
       </form>
     </div>
   </div>
@@ -44,7 +42,16 @@ label {
   display: block;
   margin-bottom: 10px;
   font-size: 16px;
-
   font-weight: 600;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  padding: 12px 14px;
+  background-color: grey;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
 }
 </style>

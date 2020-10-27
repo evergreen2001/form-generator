@@ -14,29 +14,31 @@ export default {
       drawer: "hello world",
       form: [
         // form-title
-        "Police Brutality Report Form",
-        // form title end
+        { title: "Police Brutality Report Form" },
         [
-           {
-          label: "What is the name of the officer in question?",
-          type: "text",
-        },
-        {
-          label: "When was the date of the incident?",
-          type: "date",
-        },
-        {
-          label: "How much is the bribe that was paid? (optional)",
-          type: "number",
-        },
-        ]
-       
+          {
+            label: "What is the name of the officer in question?",
+            type: "text",
+          },
+          {
+            label: "When was the date of the incident?",
+            type: "date",
+          },
+          {
+            label: "How much is the bribe that was paid?",
+            type: "number",
+          },
+        ],
+        //button
+        { buttontitle: "Submit" },
       ],
     };
   },
   props: {},
   methods: {
-    handleSubmission() {},
+    handleSubmission() {
+      console.log("hello world");
+    },
   },
 
   components: {
