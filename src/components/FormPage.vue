@@ -11,20 +11,23 @@ export default {
   created() {},
   data() {
     return {
-      drawer: "hello world",
+      formData: {},
       form: [
         // form-title
         { title: "Police Brutality Report Form" },
         [
           {
+            name: "name",
             label: "What is the name of the officer in question?",
             type: "text",
           },
           {
+            name: "date",
             label: "When was the date of the incident?",
             type: "date",
           },
           {
+            name: "number",
             label: "How much is the bribe that was paid?",
             type: "number",
           },
@@ -37,8 +40,8 @@ export default {
   props: {},
   methods: {
     handleSubmission() {
-      console.log("hello world");
-    },
+  //logic goes here
+}
   },
 
   components: {

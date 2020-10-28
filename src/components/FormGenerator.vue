@@ -2,10 +2,16 @@
   <div>
     <h1 class="form-title">{{ form[0].title }}</h1>
     <div>
-      <form @submit="handleSubmission()">
+      <form
+        @submit.prevent="
+          {
+            handleSubmission;
+          }
+        "
+      >
         <div v-for="forms in form[1]" :key="forms.label">
           <label> {{ forms.label }}</label>
-          <input :type="forms.type" required />
+          <input :type="forms.type" @change="handleSubmission" required />
         </div>
         <button class="btn" type="submit">{{ form[2].buttontitle }}</button>
       </form>
@@ -16,10 +22,13 @@
 <script>
 export default {
   name: "FormGenerator",
-  created() {},
+
   data() {
     return {};
   },
+
+  created: {},
+
   props: {
     handleSubmission: Function,
     form: Array,
