@@ -11,7 +11,7 @@
       >
         <div v-for="forms in form[1]" :key="forms.label">
           <label> {{ forms.label }}</label>
-          <input :type="forms.type" @change="handleSubmission" required />
+          <input :type="forms.type" required />
         </div>
         <button class="btn" type="submit">{{ form[2].buttontitle }}</button>
       </form>
@@ -30,7 +30,7 @@ export default {
   created: {},
 
   props: {
-    handleSubmission: Function,
+ 
     form: Array,
   },
   methods: {},

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <FormGenerator :form="form" :handleSubmission="handleSubmission" />
   </div>
 </template>
@@ -39,9 +39,7 @@ export default {
   },
   props: {},
   methods: {
-    handleSubmission() {
-  //logic goes here
-}
+ 
   },
 
   components: {
@@ -50,4 +48,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style >
+
+
+
+</style>
